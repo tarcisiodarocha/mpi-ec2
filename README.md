@@ -37,19 +37,6 @@ Use a mesma região e, preferencialmente, a mesma VPC e sub-rede para as quatro 
 6. Mantenha a saída padrão liberada, se permitido pela política da conta.
 7. Clique em **Create security group**.
 
-**Não** configure `All traffic` com origem `0.0.0.0/0`.
-
-### Associar o grupo às quatro instâncias
-
-Para cada uma das três instâncias worker e para a instância de controle:
-
-1. Abra **EC2 → Instances**.
-2. Selecione a instância.
-3. Escolha **Actions → Security → Change security groups**.
-4. Adicione `OpenMPI-Cluster-SG`, sem remover os grupos existentes que sejam necessários.
-5. Salve.
-
-Na instância de controle, preserve o grupo que permite acessar o code-server (por exemplo, porta 8080). Não altere suas regras de acesso sem necessidade.
 
 ## 3. Criar as três instâncias workers
 
